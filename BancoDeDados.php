@@ -48,13 +48,13 @@ class BancoDeDados {
 					$this->carregarID($PDO,$email_param);
 				}
 				
-				//header( "refresh:5;url=$url.php" ); 
+				header( "refresh:5;url=$url.php" ); 
 				echo "<p>Você será redirecionado em 5s. Caso não tenha sido redirecionado, clique <a href='$url.php'>aqui</a>.</p>";
 			} else{
 				echo "<h1>Erro ao cadastrar o usuário</h1>";
 				echo "<p>Não há conexão com o banco de dados!</p>";
 				
-				//header( "refresh:5;url=index.php" ); 
+				header( "refresh:5;url=index.php" ); 
 				echo '<p>Você será redirecionado em 5s. Caso não tenha sido redirecionado, clique <a href="index.php">aqui</a>.';
 			}
 		}

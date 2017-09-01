@@ -17,7 +17,7 @@
 				$dados = $bd->carregarDados($_SESSION['uid']);
 				
 				echo "<div class='perfil'>";
-				echo "<img src='src/{$dados->img}'></img>";
+				echo "<img src='{$dados->img}'></img>";
 				echo "<h2>{$dados->nome}</h2>";
 				echo "<p>{$dados->descricao}</p>";
 				echo "<p><b>Email</b>: {$dados->email}</p>";
