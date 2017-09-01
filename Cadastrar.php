@@ -10,7 +10,7 @@
             require_once 'BancoDeDados.php';
             $bd = new BancoDeDados;
 			
-			$nome = $_POST['nome']??  "";
+			$nome = $_POST['nome']?? "";
 			$email = $_POST['email']?? "";
 			$senha = $_POST['senha']?? "";
 			

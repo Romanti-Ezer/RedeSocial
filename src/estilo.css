@@ -1,5 +1,7 @@
 body {
-  background: #202020;
+  /*background: #202020;*/
+  background: url("wallpaper.jpg") no-repeat top center fixed;
+  background-size: cover;
   font-family: "Arial", sans-serif;
 }
 
@@ -7,12 +9,14 @@ h1 {
     text-align: center;
     color: #FFFFFF;
     font-size: 36pt;
+	text-shadow: 1px 1px 1px #000000;
 }
 
 h2{
     text-align: center;
     color: #000000;
     font-size: 22pt;
+	text-shadow: 0.5px 0.5px 0.5px #000000;
 }
 
 p{
@@ -26,11 +30,14 @@ p{
   width: 380px;
   position: relative;
   background: #FFFFFF;
+  opacity: 0.9;
   max-width: 400px;
   margin: 0 auto 100px;
   padding: 5px 45px 45px;
   text-align: center;
   box-shadow: 0px 0px 4px black;
+  border-radius: 5px;
+  
 }
 
 .formulario input {
@@ -62,3 +69,52 @@ p{
     background: #000099;
 }
 
+.logout {
+	float: right;
+	border: 1px solid white;
+	padding: 5px;
+	text-align:right;
+	color: white;
+	text-decoration: none;
+	opacity: 0.8;
+}
+
+.logout:hover{
+	opacity: 1;
+}
+
+a {
+	color: darkorange;
+}
+
+.perfil{
+  font-family: Myriad Pro;
+  width: 880px;
+  position: relative;
+  background: #FFFFFF;
+  opacity: 0.9;
+  max-width: 800px;
+  margin: 0 auto 100px;
+  padding: 5px 45px 45px;
+  text-align: justify;
+  box-shadow: 0px 0px 4px black;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+.perfil:hover{ opacity: 1;}
+
+.perfil p{
+	color: black;
+	text-align: justify;
+}
+
+.perfil h2{
+	color: black;
+}
+
+.perfil img{
+	width: 400px;
+	height: 400x;
+	display: block;
+	margin: 0 auto;
+}
