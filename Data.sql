@@ -1,5 +1,5 @@
 create database rede_social;
-
+use rede_social;
 create table usuario(
 id_usuario int(20) not null auto_increment,
 nome varchar(50) not null,
