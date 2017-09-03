@@ -48,21 +48,49 @@ class BancoDeDados {
 					$this->carregarID($PDO,$email_param);
 				}
 				
-				header( "refresh:5;url=$url.php" ); 
-				echo "<p>Você será redirecionado em 5s. Caso não tenha sido redirecionado, clique <a href='$url.php'>aqui</a>.</p>";
+				header( "refresh:3;url=$url.php" ); 
+				echo "<p>Você será redirecionado em 3s. Caso não tenha sido redirecionado, clique <a href='$url.php'>aqui</a>.</p>";
 			} else{
 				echo "<h1>Erro ao cadastrar o usuário</h1>";
 				echo "<p>Não há conexão com o banco de dados!</p>";
 				
-				header( "refresh:5;url=index.php" ); 
-				echo '<p>Você será redirecionado em 5s. Caso não tenha sido redirecionado, clique <a href="index.php">aqui</a>.';
+				header( "refresh:3;url=index.php" ); 
+				echo '<p>Você será redirecionado em 3s. Caso não tenha sido redirecionado, clique <a href="index.php">aqui</a>.';
 			}
 		}
 		catch (PDOException $e)
         {
             echo "Erro ao cadastrar usuário: ". $e->getMessage()."FINAL";
         }
-    }
+	}
+	public function salvar($id,$nome, $nome_escola, $local_escola,$local_casa,$relacao,$img){
+		try
+		{
+			$PDO = $this->conectar();    
+			$PDO->exec("set names utf8");
+			$sql = "UPDATE usuario SET nome=:nome,
+											nome_escola=:nome_escola,
+											local_escola=:local_escola,
+											local_casa=:local_casa,
+											relacao=:relacao,
+											img=:img WHERE id_usuario=:id";
+			$stmt = $PDO->prepare($sql);
+			$stmt->bindParam(':id', $id,PDO::PARAM_INT);
+			$stmt->bindParam(':nome', $nome);
+			$stmt->bindParam(':nome_escola', $nome_escola);
+			$stmt->bindParam(':local_escola', $local_escola);
+			$stmt->bindParam(':local_casa', $local_casa);
+			$stmt->bindParam(':relacao', $relacao);
+			$stmt->bindParam(':img', $img);
+			$result = $stmt->execute();
+			echo "<body onload=\"alert('Alterado com sucesso');window.location='Perfil.php';\">";
+			 
+		}
+		catch (PDOException $e)
+        {
+            echo "Erro ao cadastrar usuário: ". $e->getMessage()."FINAL";
+        }
+	}
 	
 	public function login($email_param, $senha_param){
 		try
@@ -87,14 +115,14 @@ class BancoDeDados {
 					$url = "index.php";
 				}
 				
-				header( "refresh:5;url=$url" ); 
-				echo "<p>Você será redirecionado em 5s. Caso não tenha sido redirecionado, clique <a href='$url'>aqui</a>.";
+				header( "refresh:3;url=$url" ); 
+				echo "<p>Você será redirecionado em 3s. Caso não tenha sido redirecionado, clique <a href='$url'>aqui</a>.";
 			} else{
 				echo "<h1>Erro ao autenticar o usuário</h1>";
 				echo "<p>Não há conexão com o banco de dados!</p>";
 				
-				header( "refresh:5;url=index.php" ); 
-				echo '<p>Você será redirecionado em 5s. Caso não tenha sido redirecionado, clique <a href="index.php">aqui</a>.';
+				header( "refresh:3;url=index.php" ); 
+				echo '<p>Você será redirecionado em 3s. Caso não tenha sido redirecionado, clique <a href="index.php">aqui</a>.';
 			}
 		}
 		catch (PDOException $e)

@@ -10,7 +10,7 @@
 			require_once 'BancoDeDados.php';
 			session_start();
 			if (isset($_SESSION['uid'])){
-				echo "<a href='logout.php' class='logout'>Encerrar Sessão</a><br/>";
+				echo "<a href='logout.php' class='btn'>Encerrar Sessão</a><a href='editar_perfil.php' class='btn'>Editar Perfil</a><br/>";
 				echo "<h1>Bem-vindo!</h1>";
 				
 				$bd = new BancoDeDados;

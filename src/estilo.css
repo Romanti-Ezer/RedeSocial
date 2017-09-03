@@ -69,7 +69,7 @@ p{
     background: #000099;
 }
 
-.logout {
+.btn {
 	float: right;
 	border: 1px solid white;
 	padding: 5px;
@@ -77,9 +77,10 @@ p{
 	color: white;
 	text-decoration: none;
 	opacity: 0.8;
+	margin-right: 2px;
 }
 
-.logout:hover{
+.btn:hover{
 	opacity: 1;
 }
 
@@ -117,4 +118,33 @@ a {
 	height: 400x;
 	display: block;
 	margin: 0 auto;
+}
+
+.for_alterar input{
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.for_alterar p{
+	text-align: left;
+}
+
+.for_alterar button{
+  text-transform: uppercase;
+  font-family: Myriad Pro;
+  font-weight: bold;
+  background: #0000CC;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  transition: all 0.3 ease;
+  cursor: pointer;
 }
