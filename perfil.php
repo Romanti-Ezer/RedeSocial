@@ -24,7 +24,6 @@
 				echo "<p><b>Onde estuda</b>: {$dados->nome_escola} - {$dados->local_escola}</p>";
 				echo "<p><b>Onde vive</b>: {$dados->local_casa}</p>";
 				echo "<p>{$dados->relacao}</p>";
-				echo "<p>{$dados->descricao}</p>";
 				echo "</div>";
 				
 				

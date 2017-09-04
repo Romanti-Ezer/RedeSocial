@@ -15,9 +15,14 @@
     $img_name = "";
     
     if(!empty(@$_FILES['arq']['name'])) {
-        $img_name = "imgs/".time("Hisu").".jpg";
-        move_uploaded_file(@$_FILES["arq"]["tmp_name"],$img_name) or die(exit());
-    }
+        try{
+			$img_name = "imgs/".time("Hisu").".jpg";
+			move_uploaded_file(@$_FILES["arq"]["tmp_name"],$img_name) or die(exit());
+		}
+		catch (Exception $e){
+			echo "Erro: ".$e->getMessage();
+		}
+	}
     else
     {
         $img_name = $dados->img;

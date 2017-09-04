@@ -21,7 +21,6 @@
 				 <img src='{$dados->img}'></img>
 				 <p><input type=\"file\" name=\"arq\"></p>
 				 <p>Nome<input type=\"text\" value=\"{$dados->nome}\" name=\"nome\"></p>
-				 <p>{$dados->descricao}</p>
 				 <p><b>Email</b>: {$dados->email}</p>
 				 <p>Nome da escola<input type=\"text\" value=\"{$dados->nome_escola}\" name=\"nome_escola\"></p>
 				 <p>Local da escola<input type=\"text\" value=\"{$dados->local_escola}\" name=\"local_escola\"></p>
