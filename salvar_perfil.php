@@ -10,6 +10,7 @@
     $local_escola = @$_POST["local_escola"];
     $local_casa = @$_POST["local_casa"];
     $relacao = @$_POST["relacao"];
+    $descricao = @$_POST["descricao"];
     
     $img_name = "";
     
@@ -22,6 +23,6 @@
         $img_name = $dados->img;
     }
     
-    $bd->salvar($_SESSION["uid"],$nome, $nome_escola, $local_escola,$local_casa,$relacao,$img_name);
+    $bd->salvar($_SESSION["uid"],$nome, $nome_escola, $local_escola,$local_casa,$relacao,$img_name,$descricao);
 
 ?>

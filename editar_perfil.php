@@ -19,14 +19,15 @@
 				
 				echo "<div class='perfil'>
 				 <img src='{$dados->img}'></img>
-				 <p><input type=\"file\" name=\"arq\"><p>
-				 <p>Nome<input type=\"text\" value=\"{$dados->nome}\" name=\"nome\"><p>
+				 <p><input type=\"file\" name=\"arq\"></p>
+				 <p>Nome<input type=\"text\" value=\"{$dados->nome}\" name=\"nome\"></p>
 				 <p>{$dados->descricao}</p>
 				 <p><b>Email</b>: {$dados->email}</p>
-				 <p>Nome da escola<input type=\"text\" value=\"{$dados->nome_escola}\" name=\"nome_escola\"><p>
-				 <p>Local da escola<input type=\"text\" value=\"{$dados->local_escola}\" name=\"local_escola\"><p>
-				 <p>Onde vive<input type=\"text\" value=\"{$dados->local_casa}\" name=\"local_casa\"><p>
-				 <p>Relação<input type=\"text\" value=\"{$dados->relacao}\" name=\"relacao\"><p>
+				 <p>Nome da escola<input type=\"text\" value=\"{$dados->nome_escola}\" name=\"nome_escola\"></p>
+				 <p>Local da escola<input type=\"text\" value=\"{$dados->local_escola}\" name=\"local_escola\"></p>
+				 <p>Onde vive<input type=\"text\" value=\"{$dados->local_casa}\" name=\"local_casa\"></p>
+				 <p>Relação<input type=\"text\" value=\"{$dados->relacao}\" name=\"relacao\"></p>
+				 <p>Descrição<textarea name=\"descricao\" id=\"textarea\">{$dados->descricao}</textarea></p>
 				 <center><button>Salvar</button></center>
 				 </div>
 				 </form>";

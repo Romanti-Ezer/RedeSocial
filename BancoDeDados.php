@@ -63,7 +63,7 @@ class BancoDeDados {
             echo "Erro ao cadastrar usuário: ". $e->getMessage()."FINAL";
         }
 	}
-	public function salvar($id,$nome, $nome_escola, $local_escola,$local_casa,$relacao,$img){
+	public function salvar($id,$nome, $nome_escola, $local_escola,$local_casa,$relacao,$img,$descricao){
 		try
 		{
 			$PDO = $this->conectar();    
@@ -73,7 +73,8 @@ class BancoDeDados {
 											local_escola=:local_escola,
 											local_casa=:local_casa,
 											relacao=:relacao,
-											img=:img WHERE id_usuario=:id";
+											img=:img,
+											descricao=:descricao WHERE id_usuario=:id";
 			$stmt = $PDO->prepare($sql);
 			$stmt->bindParam(':id', $id,PDO::PARAM_INT);
 			$stmt->bindParam(':nome', $nome);
@@ -82,8 +83,9 @@ class BancoDeDados {
 			$stmt->bindParam(':local_casa', $local_casa);
 			$stmt->bindParam(':relacao', $relacao);
 			$stmt->bindParam(':img', $img);
+			$stmt->bindParam(':descricao', $descricao);
 			$result = $stmt->execute();
-			echo "<body onload=\"alert('Alterado com sucesso');window.location='Perfil.php';\">";
+			echo "<body onload=\"alert('Alterado com sucesso');window.location='perfil.php';\">";
 			 
 		}
 		catch (PDOException $e)
